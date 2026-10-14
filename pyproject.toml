@@ -1,0 +1,21 @@
+[project]
+name = "app"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "fastapi[standard]>=0.143.0",
+    "langchain-core>=1.6.10",
+    "langchain-google-genai>=4.4.2",
+    "python-dotenv>=1.2.4",
+    "uvicorn>=0.54.0",
+]
+
+[project.scripts]
+fastapi_chatbot = "app.main:main"
+fastapi-chatbot = "app.main:main"
+
+[build-system]
+requires = ["uv_build>=0.12.15,<0.13.0"]
+build-backend = "uv_build"
